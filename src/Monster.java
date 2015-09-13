@@ -1,7 +1,5 @@
 package src;// automatically generated, do not modify
 
-package ;
-
 import java.nio.*;
 import java.lang.*;
 import java.util.*;

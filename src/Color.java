@@ -1,7 +1,5 @@
 package src;// automatically generated, do not modify
 
-package ;
-
 public class Color {
   public static final byte Red = 0;
   public static final byte Green = 1;

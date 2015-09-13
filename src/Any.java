@@ -1,7 +1,5 @@
 package src;// automatically generated, do not modify
 
-package ;
-
 public class Any {
   public static final byte NONE = 0;
   public static final byte Monster = 1;
