@@ -15,26 +15,34 @@ public class FlatBufferTest {
   static FlatBufferBuilder fbb = null;
   static ByteBuffer byteBuffer = null;
   static short hp = 0;
+
+  /**
+   * construct a flat binary buffer. The generated functions allow you to add objects to this
+   * buffer recursively. So simple.
+   */
   static void BufferConstruction() {
     fbb = new FlatBufferBuilder(BUFFER_SIZE);
-    int str = fbb.createString("MyMonster");
+    int str = fbb.createString("MyMonster_I");
     Monster.startMonster(fbb);
     Monster.addPos(fbb, Vec3.createVec3(fbb, 1.0f, 2.0f, 3.0f));
     Monster.addHp(fbb, (short) 80);
     Monster.addName(fbb, str);
     int mon = Monster.endMonster(fbb);
     Monster.finishMonsterBuffer(fbb, mon);
-
   }
 
-  static void TransmittedBuffer() {
-    // All data in this byeBuffer zone. You can get all the data from byteBuffer.
+  /**
+   * Store or send your buffer somewhere.
+   * All data in this byeBuffer zone. You can get all the data from byteBuffer.
+   */
+  static void StoreOrTransmittedBuffer() {
     byteBuffer = fbb.dataBuffer();
   }
 
-  static void GetDataFromBuffer() {
-    Object object = byteBuffer.get();
-    
+  static void GetDataFromBuffer(ByteBuffer buffer) {
+    buffer = byteBuffer;
+    String str = new String(buffer.array(), buffer.position(), fbb.offset());
+    System.out.println("Str = " + str);
   }
 
   public static void main(String[] args) {
@@ -46,11 +54,9 @@ public class FlatBufferTest {
 
     for (int i = 0; i < monster.inventoryLength(); i++)
       monster.inventory(i); // do something here
+
     BufferConstruction();
-    Monster.addHp(fbb, (short)300);
-    short newhp = monster.hp();
-    System.out.println(newhp);
-    TransmittedBuffer();
-    GetDataFromBuffer();
+    StoreOrTransmittedBuffer();
+    GetDataFromBuffer(bb);
   }
 }
