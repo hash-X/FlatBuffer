@@ -22,11 +22,11 @@ public class FlatBufferTest {
    */
   static void BufferConstruction() {
     fbb = new FlatBufferBuilder(BUFFER_SIZE);
-    int str = fbb.createString("MyMonster_I");
+    int str = fbb.createString("Monster\n");
     Monster.startMonster(fbb);
-    Monster.addPos(fbb, Vec3.createVec3(fbb, 1.0f, 2.0f, 3.0f));
-    Monster.addHp(fbb, (short) 80);
-    Monster.addName(fbb, str);
+//    Monster.addPos(fbb, Vec3.createVec3(fbb, 1.0f, 2.0f, 3.0f));
+//    Monster.addHp(fbb, (short) 80);
+//    Monster.addName(fbb, str);
     int mon = Monster.endMonster(fbb);
     Monster.finishMonsterBuffer(fbb, mon);
   }
@@ -39,22 +39,26 @@ public class FlatBufferTest {
     byteBuffer = fbb.dataBuffer();
   }
 
+  /**
+   * Deserialization Object
+   * @param buffer
+   */
   static void GetDataFromBuffer(ByteBuffer buffer) {
     buffer = byteBuffer;
     String str = new String(buffer.array(), buffer.position(), fbb.offset());
-    System.out.println("Str = " + str);
+    char[] ch = str.toString().toCharArray();
+    System.out.println("ch.length = " + ch.length + "\n");
+    for (char c : ch) {
+      System.out.print(c + " ,");
+    }
   }
 
   public static void main(String[] args) {
     byte[] bytes = new byte[BUFFER_SIZE];
     ByteBuffer bb = ByteBuffer.wrap(bytes);
     Monster monster = Monster.getRootAsMonster(bb);
-    // Access values
-    hp = monster.hp();
-
     for (int i = 0; i < monster.inventoryLength(); i++)
       monster.inventory(i); // do something here
-
     BufferConstruction();
     StoreOrTransmittedBuffer();
     GetDataFromBuffer(bb);
