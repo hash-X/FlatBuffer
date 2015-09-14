@@ -54,7 +54,7 @@ public class FlatBufferTest {
     for (int i = bytes.length - 1; i >= 0; i--) {
       System.out.print(bytes[i] + " ");
     }
-  }
+}
 
   public static void main(String[] args) {
     byte[] bytes = new byte[BUFFER_SIZE];
