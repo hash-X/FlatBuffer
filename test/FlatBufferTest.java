@@ -11,10 +11,9 @@ import java.nio.ByteBuffer;
  */
 public class FlatBufferTest {
 
-  private static final int BUFFER_SIZE= 1000;
+  private static final int BUFFER_SIZE = 1000;
   static FlatBufferBuilder fbb = null;
   static ByteBuffer byteBuffer = null;
-  static short hp = 0;
 
   /**
    * construct a flat binary buffer. The generated functions allow you to add objects to this
@@ -22,11 +21,11 @@ public class FlatBufferTest {
    */
   static void BufferConstruction() {
     fbb = new FlatBufferBuilder(BUFFER_SIZE);
-    int str = fbb.createString("Monster\n");
+    int str = fbb.createString("I am a Monster\n");
     Monster.startMonster(fbb);
-//    Monster.addPos(fbb, Vec3.createVec3(fbb, 1.0f, 2.0f, 3.0f));
-//    Monster.addHp(fbb, (short) 80);
-//    Monster.addName(fbb, str);
+    Monster.addPos(fbb, Vec3.createVec3(fbb, 12.0f, 2.0f, 3.0f));
+    Monster.addHp(fbb, (short) 180);
+    Monster.addName(fbb, str);
     int mon = Monster.endMonster(fbb);
     Monster.finishMonsterBuffer(fbb, mon);
   }
@@ -41,15 +40,19 @@ public class FlatBufferTest {
 
   /**
    * Deserialization Object
+   *
    * @param buffer
    */
   static void GetDataFromBuffer(ByteBuffer buffer) {
     buffer = byteBuffer;
-    String str = new String(buffer.array(), buffer.position(), fbb.offset());
-    char[] ch = str.toString().toCharArray();
-    System.out.println("ch.length = " + ch.length + "\n");
-    for (char c : ch) {
-      System.out.print(c + " ,");
+    Monster monster = Monster.getRootAsMonster(buffer);
+    System.out.println("Monster hp = " + monster.hp() +
+        "\nMonster name = " + monster.name() + "\nMonster new position = " + "x : " + monster.pos().x()
+        + " y : " + monster.pos().y() + " z : " + monster.pos().z());
+    System.out.println("You can also get the binary");
+    byte[] bytes = buffer.array();
+    for (int i = bytes.length - 1; i >= 0; i--) {
+      System.out.print(bytes[i] + " ");
     }
   }
 
