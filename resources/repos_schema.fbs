@@ -1,0 +1,18 @@
+namespace org.apache.hadoop.hdfs;
+
+
+table Reposlist {
+	repos:[Repo];
+}
+
+table Repo{
+	id:long;
+	name:string;
+	owner:User;
+}
+
+table User {
+	type:string;
+}
+
+root_type Reposlist;

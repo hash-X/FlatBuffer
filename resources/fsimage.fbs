@@ -1,0 +1,17 @@
+// Generated from fsimage.proto
+
+namespace fsimage;
+
+table FileSummary {
+  ondiskVersion:uint;
+  layoutVersion:uint;
+  codec:string;
+  sections:[Section];
+}
+
+table Section {
+  name:string;
+  length:ulong;
+  offset:ulong;
+}
+
