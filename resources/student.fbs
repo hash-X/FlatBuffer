@@ -1,0 +1,22 @@
+namespace src.genstudent;
+
+table ClassInfo {
+    numTeacher:short;
+    stu:[Student];
+}
+
+table Student {
+     name:string;
+     age:short;
+     id:int;
+}
+
+table MaleStudent {
+    numspecialLove:short;
+}
+
+table FemaleStudent {
+    numcosmetics:short;
+}
+
+root_type ClassInfo;

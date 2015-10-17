@@ -1,0 +1,9 @@
+namespace src.genobj;
+
+table TestObj {
+    id:ulong;
+    name:string;
+    list:[ulong];
+}
+
+root_type TestObj;
