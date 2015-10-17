@@ -34,7 +34,7 @@ public class FlatBufferBuilder {
     int minalign = 1;       // Minimum alignment encountered so far.
     int[] vtable = null;    // The vtable for the current table.
     int vtable_in_use = 0;  // The amount of fields we're actually using.
-//    boolean nested = false; // Whether we are currently serializing a table.
+    boolean nested = false; // Whether we are currently serializing a table.
     int object_start;       // Starting offset of the current struct/table.
     int[] vtables = new int[16];  // List of offsets of all vtables.
     int num_vtables = 0;          // Number of entries in `vtables` in use.
@@ -85,7 +85,7 @@ public class FlatBufferBuilder {
         minalign = 1;
         space = bb.capacity();
         vtable_in_use = 0;
-//        nested = false;
+        nested = false;
         object_start = 0;
         num_vtables = 0;
         vector_num_elems = 0;
@@ -236,7 +236,7 @@ public class FlatBufferBuilder {
     * @param alignment The alignment of the array
     */
     public void startVector(int elem_size, int num_elems, int alignment) {
-//        notNested();
+        notNested();
         vector_num_elems = num_elems;
         prep(SIZEOF_INT, elem_size * num_elems);
         prep(alignment, elem_size * num_elems); // Just in case alignment > int.
@@ -288,10 +288,10 @@ public class FlatBufferBuilder {
     * Should not be creating any other object, string or vector
     * while an object is being constructed
     */
-//    public void notNested() {
-//        if (nested)
-//            throw new AssertionError("FlatBuffers: object serialization must not be nested.");
-//    }
+    public void notNested() {
+        if (nested)
+            throw new AssertionError("FlatBuffers: object serialization must not be nested.");
+    }
 
    /**
     * Structures are always stored inline, they need to be created right
@@ -347,11 +347,11 @@ public class FlatBufferBuilder {
     * @param numfields The number of fields found in this object.
     */
     public void startObject(int numfields) {
-//        notNested();
+        notNested();
         if (vtable == null || vtable.length < numfields) vtable = new int[numfields];
         vtable_in_use = numfields;
         Arrays.fill(vtable, 0, vtable_in_use, 0);
-//        nested = true;
+        nested = true;
         object_start = offset();
     }
 

@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af98cba0-74c3-4479-a548-0d7990dc7383" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/genstudent/ClassInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/genstudent/FemaleStudent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/genobj/Genobj.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/genstudent/MaleStudent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/genstudent/Student.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/genstudent/TestStudent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/student.fbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/test.fbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/genobj/Genobj2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com/google/flatbuffers/FlatBufferBuilder.java" afterPath="$PROJECT_DIR$/com/google/flatbuffers/FlatBufferBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/genobj/Genobj.java" afterPath="$PROJECT_DIR$/test/genobj/Genobj.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="flatbuffers-java.iws" />
@@ -32,7 +26,7 @@
     <favorites_list name="flatbuffers-java" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.77442414">
+    <splitter split-orientation="horizontal" split-proportion="0.54567116">
       <split-first>
         <leaf>
           <file leaf-file-name="ClassInfo.java" pinned="false" current-in-tab="false">
@@ -49,7 +43,7 @@
             <entry file="file://$PROJECT_DIR$/com/google/flatbuffers/FlatBufferBuilder.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="262" column="15" selection-start-line="262" selection-start-column="15" selection-end-line="262" selection-end-column="15" />
+                  <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
                   <folding />
                 </state>
               </provider>
@@ -82,11 +76,33 @@
           <file leaf-file-name="Genobj.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/genobj/Genobj.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6533958">
-                  <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+                <state vertical-scroll-proportion="0.53333336">
+                  <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Genobj2.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/genobj/Genobj2.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="22" column="32" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="32" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test.fbs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/resources/test.fbs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -95,7 +111,7 @@
             <entry file="file://$PROJECT_DIR$/src/genobj/TestObj.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+                  <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
                   <folding />
                 </state>
               </provider>
@@ -105,12 +121,14 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="TestObj.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/genobj/TestObj.java">
+          <file leaf-file-name="Genobj.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test/genobj/Genobj.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.67447305">
-                  <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-                  <folding />
+                <state vertical-scroll-proportion="0.42154565">
+                  <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -152,12 +170,15 @@
         <option value="$PROJECT_DIR$/src/genstudent/ClassInfo.java" />
         <option value="$PROJECT_DIR$/src/genstudent/FemaleStudent.java" />
         <option value="$PROJECT_DIR$/resources/student.fbs" />
-        <option value="$PROJECT_DIR$/com/google/flatbuffers/FlatBufferBuilder.java" />
         <option value="$PROJECT_DIR$/test/genstudent/TestStudent.java" />
         <option value="$PROJECT_DIR$/resources/test.fbs" />
         <option value="$PROJECT_DIR$/src/genobj/TestObj.java" />
         <option value="$PROJECT_DIR$/test/genobj.java" />
         <option value="$PROJECT_DIR$/test/genobj/genobj.java" />
+        <option value="$PROJECT_DIR$/src/genobj/TestObj2.java" />
+        <option value="$PROJECT_DIR$/test/genobj/TestObj2.java" />
+        <option value="$PROJECT_DIR$/test/genobj/Genobj2.java" />
+        <option value="$PROJECT_DIR$/com/google/flatbuffers/FlatBufferBuilder.java" />
         <option value="$PROJECT_DIR$/test/genobj/Genobj.java" />
       </list>
     </option>
@@ -276,7 +297,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="genobj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,6 +397,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="test.genobj.Genobj" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="flatbuffers-java" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Genobj2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.genobj.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="test.genobj.Genobj2" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -531,18 +576,20 @@
       <listeners />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.FlatBufferTest" />
       <item index="1" class="java.lang.String" itemvalue="Application.FlatBufferWriteDisk" />
       <item index="2" class="java.lang.String" itemvalue="Application.TestStudent" />
       <item index="3" class="java.lang.String" itemvalue="Application.Genobj" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Genobj2" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Genobj" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestStudent" />
-        <item index="2" class="java.lang.String" itemvalue="Application.FlatBufferWriteDisk" />
-        <item index="3" class="java.lang.String" itemvalue="Application.FlatBufferTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Genobj2" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TestStudent" />
+        <item index="3" class="java.lang.String" itemvalue="Application.FlatBufferWriteDisk" />
+        <item index="4" class="java.lang.String" itemvalue="Application.FlatBufferTest" />
       </list>
     </recent_temporary>
   </component>
@@ -561,26 +608,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3508772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18665607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28070176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28070176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -601,15 +648,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/test/genobj/Genobj.java</url>
-          <line>13</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -936,34 +975,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/google/flatbuffers/FlatBufferBuilder.java">
+    <entry file="file://$PROJECT_DIR$/resources/test.fbs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="262" column="15" selection-start-line="262" selection-start-column="15" selection-end-line="262" selection-end-column="15" />
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/test.fbs">
+    <entry file="file://$PROJECT_DIR$/test/genobj/Genobj2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23880596">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/genobj/TestObj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/google/flatbuffers/FlatBufferBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/genobj/Genobj.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6533958">
-          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.53333336">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
