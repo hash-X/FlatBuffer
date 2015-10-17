@@ -385,8 +385,8 @@ public class FlatBufferBuilder {
     * @see #startObject(int)
     */
     public int endObject() {
-//        if (vtable == null || !nested)
-//            throw new AssertionError("FlatBuffers: endObject called without startObject");
+        if (vtable == null || !nested)
+            throw new AssertionError("FlatBuffers: endObject called without startObject");
         addInt(0);
         int vtableloc = offset();
         // Write out the current vtable.
@@ -433,7 +433,7 @@ public class FlatBufferBuilder {
             bb.putInt(bb.capacity() - vtableloc, offset() - vtableloc);
         }
 
-//        nested = false;
+        nested = false;
         return vtableloc;
     }
 

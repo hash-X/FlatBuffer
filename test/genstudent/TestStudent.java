@@ -2,7 +2,6 @@ package test.genstudent;
 
 import com.google.flatbuffers.FlatBufferBuilder;
 import src.genstudent.ClassInfo;
-import src.genstudent.MaleStudent;
 import src.genstudent.Student;
 
 import java.nio.ByteBuffer;
@@ -11,33 +10,36 @@ import java.nio.ByteBuffer;
  * Created by minglei on 15-10-17.
  */
 public class TestStudent {
-  static void print(ClassInfo classInfo) {
-    int numT = classInfo.numTeacher();
-//    int stuLength = classInfo.stuLength();
-    Student student = classInfo.stu(0);
-    int age = student.age();
-    String name = student.name();
-    System.out.println("numT = " + numT + '\n' +
-//          "stuLength = " + stuLength + '\n' +
-          "age = " + age + '\n' +
-          "name = " + name);
-  }
+
   public static void main(String[] args) {
     FlatBufferBuilder fbb = new FlatBufferBuilder();
     ByteBuffer byteBuffer = null;
     ClassInfo.startClassInfo(fbb);
-    ClassInfo.addNumTeacher(fbb, (short)2);
-    int[] stuData = new int[2];
-    stuData[0] = 1;
-    stuData[1] = 2;
-    ClassInfo.createStuVector(fbb, stuData);
-    Student.addName(fbb, fbb.createString("zhangsan"));
-    Student.addAge(fbb, (short)23);
-    MaleStudent.addNumspecialLove(fbb, (short)4);
-    int end = ClassInfo.endClassInfo(fbb);
+    short numTeacher = 8;
+    
+    // student zhangsan info
+    int name1 = fbb.createString("Tom");
+    short age1 = 15;
+    int id1 = 1;
+    int firstStu = Student.createStudent(fbb, name1, age1, id1);
+
+    // student lisi info
+    int name2 = fbb.createString("Atom");
+    short age2 = 16;
+    int id2 = 2;
+    int secStu = Student.createStudent(fbb, name2, age2, id2);
+
+    int[] data = new int[]{ firstStu,secStu };
+    int stu = ClassInfo.createStuVector(fbb, data);
+    int end = ClassInfo.createClassInfo(fbb, numTeacher, stu);
     ClassInfo.finishClassInfoBuffer(fbb, end);
     byteBuffer = fbb.dataBuffer();
     ClassInfo classInfo = ClassInfo.getRootAsClassInfo(byteBuffer);
-    print(classInfo);
+
+    short numT = classInfo.numTeacher();
+    int stuL = classInfo.stuLength();
+    Student s1 = classInfo.stu(0);
+    String s1Name = s1.name();
+    short s1Age = s1.age();
   }
 }
