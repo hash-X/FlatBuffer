@@ -14,9 +14,10 @@ public class TestStudent {
   public static void main(String[] args) {
     FlatBufferBuilder fbb = new FlatBufferBuilder();
     ByteBuffer byteBuffer = null;
-    ClassInfo.startClassInfo(fbb);
+
+//    Do not have this code , or have an error of "FlatBuffers: object serialization must not be nested"
+//    ClassInfo.startClassInfo(fbb);
     short numTeacher = 8;
-    
     // student zhangsan info
     int name1 = fbb.createString("Tom");
     short age1 = 15;
@@ -41,5 +42,11 @@ public class TestStudent {
     Student s1 = classInfo.stu(0);
     String s1Name = s1.name();
     short s1Age = s1.age();
+
+    Student s2 = classInfo.stu(1);
+    String s2Name = s2.name();
+    short s2Age = s2.age();
+
+
   }
 }
