@@ -8,29 +8,38 @@ import java.nio.ByteBuffer;
 
 /**
  * Created by minglei on 15-10-17.
+ *
+ * student.fbs
  */
 public class TestStudent {
 
-  public static void main(String[] args) {
-    FlatBufferBuilder fbb = new FlatBufferBuilder();
-    ByteBuffer byteBuffer = null;
-
-//    Do not have this code , or have an error of "FlatBuffers: object serialization must not be nested"
-//    ClassInfo.startClassInfo(fbb);
-    short numTeacher = 8;
+  static int[] constructStu(FlatBufferBuilder fbb) {
+    int[] students = new int[2];
     // student zhangsan info
     int name1 = fbb.createString("Tom");
     short age1 = 15;
     int id1 = 1;
     int firstStu = Student.createStudent(fbb, name1, age1, id1);
-
+    students[0] = firstStu;
     // student lisi info
     int name2 = fbb.createString("Atom");
     short age2 = 16;
     int id2 = 2;
     int secStu = Student.createStudent(fbb, name2, age2, id2);
+    students[1] = secStu;
+    return students;
+  }
 
-    int[] data = new int[]{ firstStu,secStu };
+  public static void main(String[] args) {
+    FlatBufferBuilder fbb = new FlatBufferBuilder();
+    ByteBuffer byteBuffer = null;
+//  Do not have this code , or have an error of "FlatBuffers: object serialization must not be nested"
+//  ClassInfo.startClassInfo(fbb);
+    short numTeacher = 8;
+    int[] students = new int[2];
+    students = constructStu(fbb);
+
+    int[] data = new int[]{ students[0],students[1] };
     int stu = ClassInfo.createStuVector(fbb, data);
     int end = ClassInfo.createClassInfo(fbb, numTeacher, stu);
     ClassInfo.finishClassInfoBuffer(fbb, end);
