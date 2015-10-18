@@ -1,6 +1,6 @@
 # FlatBuffer
 
-How you will use this project?
+#How you will use this project?
 
 #1 : git clone https://github.com/hash-X/FlatBuffer
 #2 : Use your IDE (e.g.) open the pom.xml
