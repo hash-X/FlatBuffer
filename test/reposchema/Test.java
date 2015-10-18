@@ -5,8 +5,6 @@ import src.reposchema.Repo;
 import src.reposchema.Reposlist;
 import src.reposchema.User;
 
-import java.nio.ByteBuffer;
-
 /**
  * Created by minglei on 15-10-18.
  *
@@ -33,7 +31,7 @@ public class Test {
     repos = constructRepos(fbb);
     int inv = Reposlist.createReposVector(fbb, repos);
     int relist = Reposlist.createReposlist(fbb, inv);
-    Reposlist.finishReposlistBuffer(fbb, relist);
+    Reposlist.finishReposlistBuffer(fbb, relist); // attention this parm : relist
 
     Reposlist reposlist = Reposlist.getRootAsReposlist(fbb.dataBuffer());
 

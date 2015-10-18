@@ -1,0 +1,20 @@
+
+option java_package = "src.proto_student";
+option java_outer_classname = "Student";
+
+message StudentSummary {
+    required uint32 ondiskVersion = 1;
+    optional string codec         = 2;
+    repeated Section sections = 3;
+}
+
+message Section {
+    optional string name = 1;
+    optional uint64 length = 2;
+}
+
+
+
+
+
+
