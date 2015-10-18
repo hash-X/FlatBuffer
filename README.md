@@ -11,3 +11,6 @@ This is a FlatBuffer application which I will refactor HDFS Namenode protobuf la
 
 FlatBuffer Google groups Forum
 https://groups.google.com/forum/#!topic/flatbuffers/_f6WuPJTxlo
+
+https://github.com/google/flatbuffers/issues/285
+https://github.com/google/flatbuffers/issues/294
