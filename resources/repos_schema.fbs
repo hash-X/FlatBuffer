@@ -1,4 +1,4 @@
-namespace org.apache.hadoop.hdfs;
+namespace src.reposchema;
 
 
 table Reposlist {

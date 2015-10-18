@@ -31,6 +31,7 @@ public class TestStudent {
   }
 
   public static void main(String[] args) {
+    // Serialization
     FlatBufferBuilder fbb = new FlatBufferBuilder();
     ByteBuffer byteBuffer = null;
 //  Do not have this code , or have an error of "FlatBuffers: object serialization must not be nested"
@@ -38,24 +39,26 @@ public class TestStudent {
     short numTeacher = 8;
     int[] students = new int[2];
     students = constructStu(fbb);
-
     int[] data = new int[]{ students[0],students[1] };
     int stu = ClassInfo.createStuVector(fbb, data);
     int end = ClassInfo.createClassInfo(fbb, numTeacher, stu);
     ClassInfo.finishClassInfoBuffer(fbb, end);
     byteBuffer = fbb.dataBuffer();
-    ClassInfo classInfo = ClassInfo.getRootAsClassInfo(byteBuffer);
 
+    // Deserialization
+    ClassInfo classInfo = ClassInfo.getRootAsClassInfo(byteBuffer);
     short numT = classInfo.numTeacher();
     int stuL = classInfo.stuLength();
     Student s1 = classInfo.stu(0);
     String s1Name = s1.name();
     short s1Age = s1.age();
-
     Student s2 = classInfo.stu(1);
     String s2Name = s2.name();
     short s2Age = s2.age();
 
-
+    // another way to access student
+    Student s1_ = classInfo.stu(new Student(), 1);
+    short age_ = s1_.age();
+    String name_ = s1_.name();
   }
 }
