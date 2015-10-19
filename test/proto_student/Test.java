@@ -1,6 +1,5 @@
 package test.proto_student;
 
-
 import src.proto_student.Student;
 
 import java.util.Iterator;
