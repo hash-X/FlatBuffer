@@ -5,6 +5,9 @@ import src.reposchema.Repo;
 import src.reposchema.Reposlist;
 import src.reposchema.User;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 /**
  * Created by minglei on 15-10-18.
  *
@@ -35,10 +38,23 @@ public class Test {
 
     Reposlist reposlist = Reposlist.getRootAsReposlist(fbb.dataBuffer());
 
-    Repo repo = reposlist.repos(0);
-    String name = repo.name();
-    User user = repo.owner();
-    String type = user.type();
+    ArrayList<Repo> repoArrayList = new ArrayList<Repo>();
+    for (int i = 0; i < reposlist.reposLength(); i++) {
+      repoArrayList.add(reposlist.repos(i));
+    }
+
+    Iterator<Repo> iterator = repoArrayList.iterator();
+    while (iterator.hasNext()) {
+      Repo repo = iterator.next();
+
+      long id = repo.id();
+      String name = repo.name();
+      User user = repo.owner();
+      String userType = user.type();
+
+      System.out.println("id = " + id + " name = " +
+          name + " userType = " + userType);
+    }
   }
 }
 
