@@ -42,7 +42,15 @@ public class Test {
     for (int i = 0; i < reposlist.reposLength(); i++) {
       repoArrayList.add(reposlist.repos(i));
     }
-
+    /**
+     * if in protobuf, you can direct get a ArrayList<Repo> with the
+     * following code, but in flatbuffer, you will use a few line of
+     * code to make the same function.
+     *
+     * e.g.
+     * ArrayList<Repo> protoRepo = Lists.newArrayList(reposlist
+     *    .getReposList());
+    **/
     Iterator<Repo> iterator = repoArrayList.iterator();
     while (iterator.hasNext()) {
       Repo repo = iterator.next();
