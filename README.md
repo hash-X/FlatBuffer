@@ -1,4 +1,4 @@
-# FlatBuffer
+# FlatBuffer example in Java, you can see anything you want.
 
 #How you will use this project?
 
