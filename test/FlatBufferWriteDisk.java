@@ -21,8 +21,10 @@ public class FlatBufferWriteDisk {
     byteBuffer = fbb.dataBuffer();
 
     int len = byteBuffer.capacity() - byteBuffer.position();
-    byte[] bytes = new byte[len];
-    byteBuffer.get(bytes);
+//    byte[] bytes = new byte[len];
+//    byteBuffer.get(bytes);
+    // https://github.com/google/flatbuffers/issues/294
+    byte[] bytes = fbb.sizedByteArray(); // Use FlatBufferBuilder.sizedByteArray() to get the bytes, much simpler.
 
     FileOutputStream fos = new FileOutputStream("C:\\Users\\mingleiz\\flatbuffer.txt");
     DataOutputStream dataOutputStream=new DataOutputStream(fos);

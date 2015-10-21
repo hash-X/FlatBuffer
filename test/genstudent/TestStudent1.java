@@ -35,12 +35,13 @@ public class TestStudent1 {
     // int stuOffset = Student.createStudent(fbb,fbb.createString("lisi"), (short)19, 1);
 
     // right way
+    int stu1 = Student.createStudent(fbb, fbb.createString("zhangsan"), (short)19, 1);
+    int stu2 = Student.createStudent(fbb, fbb.createString("lisi"), (short)29, 2);
+
     int[] data =
         {
-            Student.createStudent(fbb, fbb.createString("zhangsan"),
-                (short)19,
-                1),
-                  Student.createStudent(fbb, fbb.createString("lisi"), (short)29, 2)
+            32,
+                  68
         };
 
     int stuOffset = ClassInfo.createStuVector(fbb, data);
