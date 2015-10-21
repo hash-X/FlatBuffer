@@ -14,3 +14,4 @@ https://groups.google.com/forum/#!topic/flatbuffers/_f6WuPJTxlo
 
 #https://github.com/google/flatbuffers/issues/285
 #https://github.com/google/flatbuffers/issues/294
+#https://github.com/google/flatbuffers/issues/301
