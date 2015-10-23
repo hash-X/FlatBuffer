@@ -12,7 +12,9 @@ This is a FlatBuffer application which I will rewrite HDFS Namenode protobuf usi
 FlatBuffer Google groups Forum
 
     https://groups.google.com/forum/#!topic/flatbuffers/_f6WuPJTxlo
-
+    
+    https://github.com/google/flatbuffers/issues/191
+    https://github.com/google/flatbuffers/issues/273
     https://github.com/google/flatbuffers/issues/285
     https://github.com/google/flatbuffers/issues/294
     https://github.com/google/flatbuffers/issues/301
