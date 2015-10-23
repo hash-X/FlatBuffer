@@ -2,7 +2,7 @@
 
 #How you will use this project?
 
-    1 : git clone `https://github.com/hash-X/FlatBuffer`
+    1 : git clone https://github.com/hash-X/FlatBuffer
     2 : Use your IDE (e.g.IntelliJ IDEA) open the pom.xml
     3 : You will see how to use FlatBuffer in any type, including any existing model.
 
