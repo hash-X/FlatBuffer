@@ -14,6 +14,7 @@ FlatBuffer Google groups Forum
     https://groups.google.com/forum/#!topic/flatbuffers/_f6WuPJTxlo
     
 # Some issue and bug I propose and participate in.
+    https://github.com/google/flatbuffers/issues/306
     https://github.com/google/flatbuffers/issues/191
     https://github.com/google/flatbuffers/issues/273
     https://github.com/google/flatbuffers/issues/285
