@@ -1,6 +1,6 @@
 // automatically generated, do not modify
 
-package src.genstudent;
+package src.separateschema;
 
 import java.nio.*;
 import java.lang.*;
@@ -37,8 +37,6 @@ public final class Student extends Table {
     int o = builder.endObject();
     return o;
   }
-  public static void finishStudentBuffer(FlatBufferBuilder builder, int offset)
-  { builder.finish(offset); }
-
+  public static void finishStudentBuffer(FlatBufferBuilder builder, int offset) { builder.finish(offset); }
 };
 

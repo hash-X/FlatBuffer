@@ -43,14 +43,22 @@ public class TestStudent1 {
             32,
                   68
         };
-
+    /**
+     * Order
+     *
+     * startClassInfo
+     * endClassInfo
+     * finishClassInfoBuffer
+     *
+     */
     int stuOffset = ClassInfo.createStuVector(fbb, data);
     ClassInfo.startClassInfo(fbb);
     ClassInfo.addStu(fbb, stuOffset);
-    ClassInfo.addNumTeacher(fbb, (short) 3);
+//    ClassInfo.addNumTeacher(fbb, (short) 3);
     int env = ClassInfo.endClassInfo(fbb);
     ClassInfo.finishClassInfoBuffer(fbb, env);
     ClassInfo classInfo = ClassInfo.getRootAsClassInfo(fbb.dataBuffer());
+
     short num = classInfo.numTeacher();
     System.out.println(num);
     System.out.print(classInfo.stu(1).name());

@@ -1,0 +1,9 @@
+include "Student.fbs";
+namespace src.separateschema;
+
+table ClassInfo {
+    numTeacher:short;
+    stu:[Student];
+}
+
+root_type ClassInfo;

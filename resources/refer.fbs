@@ -1,0 +1,12 @@
+namespace src.refer;
+
+table IntelClassInfo {
+    numTeacher:short;
+    stu:IntelStudent;
+}
+
+table IntelStudent {
+     id:int;
+}
+
+root_type IntelClassInfo;

@@ -1,0 +1,9 @@
+namespace src.separateschema;
+
+table Student {
+     name:string;
+     age:short;
+     id:int;
+}
+
+root_type Student;
