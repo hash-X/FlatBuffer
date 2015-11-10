@@ -1,4 +1,4 @@
-# FlatBuffer example in Java, you can see anything you want.
+# Help Java Programmer to Better use FlatBuffer in their project. you can see anything you want.
 
 #How you will use this project?
 
