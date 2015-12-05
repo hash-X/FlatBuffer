@@ -1,4 +1,4 @@
-# Help Java Programmer to Better use FlatBuffer in their project. you can see anything you want.
+# Help Java Programmer Better Use FlatBuffer In Their project. you can see anything you want.
 
 #How you will use this project?
 
